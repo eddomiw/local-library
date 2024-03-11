@@ -7,6 +7,7 @@ const asyncHandler = require("express-async-handler");
 
 exports.index = asyncHandler(async (req, res, next) => {
   // Get details of books, book instances, authors and genre counts (in parallel)
+  //FIXME: Try deleting a few of the constants to see if the amount of executions that are slowing
   const [
     numBooks,
     numBookInstances,
