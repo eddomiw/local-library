@@ -7,22 +7,7 @@ const logger = require("morgan");
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const catalogRouter = require("./routes/catalog"); //Import routes for "catalog" area of site
-
-// Set up dotenv to load environment variables
-require("dotenv").config();
-
-// Set up mongoose connection
-const mongoose = require("mongoose");
-mongoose.set("strictQuery", false);
-
-// Fetch MongoDB connection string from environment variables
-const mongoDB = process.env.MONGODB_URI;
-
-main().catch((err) => console.log(err));
-
-async function main() {
-  await mongoose.connect(mongoDB);
-}
+const script = require("./script");
 
 const app = express();
 
