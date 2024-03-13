@@ -1,4 +1,4 @@
-const Boook = require("../models/book");
+const Book = require("../models/book");
 const Author = require("../models/author");
 const asyncHandler = require("express-async-handler");
 
